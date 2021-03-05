@@ -1,9 +1,5 @@
-import pandas as pd  
-import spacy 
+import pandas as pd 
 
-import argparse
-
-data_path = './data/yelp_ratings.csv'
 
 
 def load_data(data_path, split = 0.85): 
@@ -32,8 +28,6 @@ def load_data(data_path, split = 0.85):
 
     return texts[:split], train_labels, texts[split:], val_labels 
 
-from spacy.util import minibatch 
-
 def train(): 
     loss = {} 
     return loss 
@@ -46,5 +40,3 @@ def evaluate():
     accuracy = 0 
     return accuracy
 
-
-print(load_data(data_path))
